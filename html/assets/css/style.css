@@ -1,0 +1,204 @@
+/*=================================================================*\
+/* By: 			|	Nevera Development  							|
+/* FiveM: 		|	https://forum.cfx.re/u/neveradevelopment		|
+/* Discord: 	|	https://discord.gg/NeveraDev/tw28AqrgWU  		|
+/*=================================================================*/
+/* If you have any problems you can contact us via discord. <3     */
+
+@import 'https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap';
+*{margin:0;padding:0;border:0;outline:0;text-decoration:none;line-height:inherit;vertical-align:inherit;}h1,h2,h3,h4,h5,h6{font-weight:normal;}ul{list-style:none;}
+*{font-family: 'Mulish', sans-serif;}
+
+body{
+	overflow: hidden;
+	width: 100vw;
+	height: 100vh;
+	/*background-image: url("../img/background.jpg");*/
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+body:hover{
+	cursor: default;
+}
+
+.center{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+img.logo{
+	width: 13vw;
+}
+.social{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1vw;
+	margin-top: 1.5vw;
+}
+.social li a{
+	border-radius: 0.1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 2.25vw;
+    height: 2.25vw;
+    color: #fff;
+    font-size: 1vw;
+    color: #b1b1b1de;
+    box-shadow: 0px 0px 0px 0.05vw rgba(var(--main),1) inset;
+    color: rgba(var(--main),1);
+    opacity: 0.7;
+    transition: 0.3s;
+}
+.social li a span{display: none;}
+
+.social li a:hover{
+	background-color: rgba(var(--main),1);
+	color: #111;
+	opacity: 1;
+	transform: scale(1.12);
+	box-shadow: 0px 0px 0px 0.05vw rgba(var(--main),1) inset, 0px 0px 1vw #000;
+    
+}
+.center h1 strong{
+	font-weight: 900;
+	text-shadow: 0px 0px 2vw rgba(var(--main), 0.5);
+	color: rgba(var(--main),1);
+}
+.center h1{
+	letter-spacing: 0.25vw;
+	font-size: 5vw;
+	font-weight: 900;
+	font-style: italic;
+	color: #fff;
+	text-shadow: 0px 0px 2vw #ffffff50;
+}
+.center p{
+	color: #fff;
+	font-weight: 800;
+	font-size: 2vw;
+	text-transform: uppercase;
+	font-style: italic;
+	letter-spacing: 0.2vw;
+	margin-top: -1vw;
+	text-shadow: 0px 0px 2vw #ffffff50;
+}
+.center p b{
+	font-weight: 900;
+	text-shadow: 0px 0px 2vw rgba(var(--main), 0.5);
+	color: rgba(var(--main),1);
+}
+.center span{
+	width: 28vw;
+    color: #fff;
+    text-align: center;
+    margin-top: 0.5vw;
+    font-size: 0.75vw;
+    color: #dbdbdb;
+}
+.loading-bar{
+	position: fixed;
+	bottom:0vw;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.loading-bar p{
+	font-size: 1vw;
+	color: #fff;
+	margin-bottom: 0.6vw;
+
+	font-size: 0.75vw;
+    color: #dbdbdb;
+}
+.loading-bar .bar{
+	margin-bottom: 0.4vw;
+	width: 30vw;
+	height: 0.3vw;
+	border-radius: 100vw;
+	background-color: #353535a6;
+}
+.loading-bar .bar .line{
+	height: 100%;
+	width: 0%;
+	border-radius: 100vw;
+	background-color: rgba(var(--main),1);
+	box-shadow: 0px 0px 2vw rgba(var(--main), 0.631);
+	transition: 1s;
+}
+.panel{
+	position: fixed;
+    width: 20vw;
+    border-radius: 0.2vw;
+    transition: 0.3s;
+    color: #fff;
+}
+.panel h3{
+	font-size: 1vw;
+}
+.panel.left{
+	position: fixed;
+	top: 50%;
+	left: 0%;
+	margin:0px 3vw;
+	transform: translate(0%, -50%);
+}
+.panel.right{
+	position: fixed;
+	top: 50%;
+	right: 0%;
+	margin:0px 3vw;
+	transform: translate(0%, -50%);
+}
+.pfp{
+	width: 1.5vw;
+	height: 1.5vw;
+	border-radius: 0.1vw;
+}
+.list{
+	display: flex;
+	flex-direction: column;
+	gap: 0.3vw;
+	margin-top: 0.4vw;
+	height: 25vw;
+	overflow: auto;
+}
+::-webkit-scrollbar {
+  width: 0px;
+}
+.staff .info{
+	display: flex;
+	align-items: center;
+	gap: 0.5vw;
+	font-weight: 700;
+}
+.staff{
+	background-color: #ffffff0d;
+	padding: 0.2vw 0.3vw;
+	border-radius: 0.1vw;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 0.7vw;
+	text-shadow: 0px 0px 0.5vw #000;
+	box-shadow: 0.05vw 0px #ff960000 inset, 0px 0px 0px 0.05vw #ffffff10 inset;
+	transition: 0.2s;
+	background-color: rgba(var(--main),0.08);
+}
+.staff .status{
+	transition: 0.2s;
+	color: rgba(var(--main),1);
+	font-weight: 700;
+}
