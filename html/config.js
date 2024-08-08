@@ -9,12 +9,12 @@ var staff_team = [
 
 	{
 		"name":"Nevera Owner",
-		"image":"https://dunb17ur4ymx4.cloudfront.net/webstore/logos/7c009fb76e8b03bde407b5aef5648ffb029b4d44.jpg",
+		"image":"https://forum.cfx.re/user_avatar/forum.cfx.re/neveradevelopment/144/4447132_2.png",
 		"rank":"Owner"
 	},
 	{
 		"name":"Nevera Admin",
-		"image":"https://dunb17ur4ymx4.cloudfront.net/webstore/logos/7c009fb76e8b03bde407b5aef5648ffb029b4d44.jpg",
+		"image":"https://forum.cfx.re/user_avatar/forum.cfx.re/neveradevelopment/144/4447132_2.png",
 		"rank":"Admin"
 	}
 
@@ -27,7 +27,7 @@ var staff_team = [
 // green
 // pink
 // purple
-const theme = "blue"
+const theme = "orange"
 
 const discord = "erw" // If = "" then icon will not show up on screen
 const instagram = "https://instagram.com/"
@@ -39,5 +39,11 @@ const showPlayersList = true
 
 
 // Player List
-const serverCode = "******" //Your server CODE from fivem. (cfx.re/join/abcdef) this ABCDEF is your coude, paste it in serverCode. 
-const playerProfileImage = "https://dunb17ur4ymx4.cloudfront.net/webstore/logos/7c009fb76e8b03bde407b5aef5648ffb029b4d44.jpg"
+const serverCode = "******" //Your server CODE from fivem. (cfx.re/join/abcdef) this ABCDEF is your code, paste it in serverCode. 
+const playerProfileImage = "https://forum.cfx.re/user_avatar/forum.cfx.re/neveradevelopment/144/4447132_2.png"
+
+
+// If you want to remove backgroundVideo, set it = "" 
+const backgroundVideo = "4CiESD8IjmM" // Youtube video code. (https://www.youtube.com/watch?v=abcdefgh) this ABCDEFGH is your code, paste it in backgroundVideo. 
+const backgroundVideoBlur = 0 // Higher number = more blur (some good blur is 5)
+const backgroundVideoOpacity = 0.3
