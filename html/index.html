@@ -21,6 +21,13 @@
 </head>
 <body>
 
+	<div class="mini-buttons">
+		<button onclick="toggleMute(this)"><i class="bi bi-volume-up"></i></button>
+		<button onclick="togglePause(this)"><i class="bi bi-pause"></i></button>
+	</div>
+
+	<iframe allow="autoplay; encrypted-media" id="youtube-video"></iframe>
+
 	<div class="panel left staffteam" style="display:none;">
 		<h3>Staff Team</h3>
 		<div class="list staff_team"></div>
@@ -51,5 +58,6 @@
 	<div class="loading"></div>
 
 <script type="text/javascript" src="assets/js/script.js"></script>
+<script src="https://www.youtube.com/iframe_api"></script>
 </body>
 </html>
