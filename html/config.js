@@ -44,6 +44,8 @@ const playerProfileImage = "https://forum.cfx.re/user_avatar/forum.cfx.re/nevera
 
 
 // If you want to remove backgroundVideo, set it = "" 
-const backgroundVideo = "4CiESD8IjmM" // Youtube video code. (https://www.youtube.com/watch?v=abcdefgh) this ABCDEFGH is your code, paste it in backgroundVideo. 
+const backgroundVideo = "4rMZ3SX_xFk" // Youtube video code. (https://www.youtube.com/watch?v=abcdefgh) this ABCDEFGH is your code, paste it in backgroundVideo. 
 const backgroundVideoBlur = 0 // Higher number = more blur (some good blur is 5)
 const backgroundVideoOpacity = 0.3
+
+const showYTVideo = false // set this to false if you want to only get sound from video and static (image) background.

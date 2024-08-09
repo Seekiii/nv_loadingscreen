@@ -1,3 +1,6 @@
+## V1.2 (Changelogs)
+- Play only sound without video background
+
 ## V1.1 (Changelogs)
 - Added autplay video/youtube background.
 - Added functions to pause and mute background/sound

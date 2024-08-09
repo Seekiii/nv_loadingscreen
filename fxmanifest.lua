@@ -4,7 +4,7 @@ lua54 'yes'
 
 author 'Nevera Development'
 description '[FREE] Loading Screen'
-version '1.1.0'
+version '1.2'
 
 loadscreen_manual_shutdown "yes"
 loadscreen 'html/index.html'

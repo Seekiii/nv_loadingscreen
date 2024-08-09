@@ -126,11 +126,14 @@ function toggleMute() {
 }
 
 if (backgroundVideo){
-	$("body").css("background","#000")
 	$("iframe").attr("src","https://www.youtube.com/embed/"+backgroundVideo+"?autoplay=1&controls=0&enablejsapi=1&controls=0&disablekb=1")
 	$("iframe").css("filter",`blur(${backgroundVideoBlur}px)`)
-	$("iframe").css("opacity",`${backgroundVideoOpacity}`)
+	$("iframe").css("opacity",`0`)
 	$(".mini-buttons").show(0,function(){$(this).css("display","flex")})
+	if (showYTVideo){
+		$("body").css("background","#000")
+		$("iframe").css("opacity",`${backgroundVideoOpacity}`)
+	}
 }
 else{}
 
