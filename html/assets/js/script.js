@@ -88,6 +88,11 @@ if (twitter != ""){
 	$(".twitter a").attr("href",twitter)
 }
 
+$("a").on("click",function(e){
+	e.preventDefault()
+	window.invokeNative('openUrl', e.target.href)
+})
+
 if (theme == "orange"){
 	$("body").append(`<style>:root{--main:255, 150, 0;}</style>`)
 	$("body").css("background-image","url('assets/img/orange.jpg')")
