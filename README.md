@@ -1,3 +1,7 @@
+## V1.3 (Changelogs)
+- Added loading of local MP4 files
+- Added volume adjustment
+
 ## V1.2 (Changelogs)
 - Play only sound without video background
 
