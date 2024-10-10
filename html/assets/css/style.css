@@ -17,7 +17,7 @@ body{
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	cursor: none !important;
+	/*cursor: none !important;*/
 }
 
 .center{
@@ -84,7 +84,7 @@ img.logo{
 	color: #fff;
 	font-weight: 800;
 	font-size: 2vw;
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
 	font-style: italic;
 	letter-spacing: 0.2vw;
 	margin-top: -1vw;
@@ -200,7 +200,7 @@ img.logo{
 	color: rgba(var(--main),1);
 	font-weight: 700;
 }
-iframe{
+iframe, video{
 	position: absolute;
 	width: 100vw;
 	height: 100vh;
@@ -215,7 +215,9 @@ iframe{
 	display: flex;
 	gap: 0.5vw;
 	display: none;
+	align-items: center;
 }
+
 .mini-buttons button{
 	border-radius: 0.1vw;
 	display: flex;
@@ -239,4 +241,48 @@ iframe{
 	opacity: 1;
 	transform: scale(1.12);
 	box-shadow: 0px 0px 0px 0.05vw rgba(var(--main), 1) inset, 0px 0px 1vw #000;
+}
+
+.volume-slider {
+    -webkit-appearance: none;
+    width: 100px;
+    height: 0.1vw;
+    background: rgba(var(--main), 1);
+    border-radius: 0.1vw;
+    outline: none;
+}
+
+.volume-slider::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	width: 1vw;
+	height: 1vw;
+	/*background: rgba(var(--main), 1);*/
+	background-color: #000;
+	box-shadow: 0px 0px 0vw 0.1vw rgba(var(--main), 0.5) inset;
+	border-radius: 0.1vw;
+	cursor: pointer;
+	transition: 0.2s;
+}
+.volume-slider::-webkit-slider-thumb:hover{
+	background: rgba(var(--main), 1);
+	transform: rotate(45deg);
+	box-shadow: 0px 0px 0vw 0.1vw rgba(var(--main), 0.0) inset, 0px 0px 2vw rgba(var(--main), 0.5);
+}
+.volume-slider::-moz-range-thumb {
+	width: 20px;
+	height: 20px;
+	background: #007bff;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: background 0.3s ease;
+}
+.inpt{
+	display: flex;
+	align-items: center;
+}
+.inpt span{
+	margin-left: 0.5vw;
+	font-size: 0.6vw;
+	opacity: 0.4;
+  font-weight: 200;
 }

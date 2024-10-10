@@ -5,6 +5,10 @@
 /*=================================================================*/
 /* If you have any problems you can contact us via discord. <3     */
 
+
+$(".center h1").html(name)
+$(".center p").html(underName)
+$(".center span").html(desc)
 var serverInfo = null
 function loading(num){
 	let current = parseInt($(".loading-bar p").text(), 10) || 0;
@@ -118,58 +122,79 @@ if (theme == "purple"){
 	$("body").css("background-image","url('assets/img/purple.jpg')")
 }
 
-function toggleMute() {
-	var iframe = $("iframe");
-	var src = iframe.attr("src");
-	if (src.includes("mute=1")) {
-		src = src.replace("&mute=1", "");
-		src = src.replace("?mute=1", "?");
-	} else {
-		src += (src.includes("?") ? "&" : "?") + "mute=1";
+let a, v, yt, isMute = false, isPaused = false;
+
+if (video.startsWith("https://www.youtube.com") && video != "video.mp4") {
+	let videoId = video.split('/').pop().split('=')[1];
+	if (!showVideo){
+		videoOpacity = 0
 	}
-	iframe.attr("src", src);
+	$("iframe").attr("src", `https://www.youtube.com/embed/${videoId}?autoplay=1&controls=0&enablejsapi=1&disablekb=1`)
+			   .css({ filter: `blur(${videoBlur}px)`, opacity: videoOpacity });
+
+	$(".mini-buttons.yt").show().css("display", "flex");
+	if (showVideo) $("body").css("background", "#000");
 }
 
-if (backgroundVideo){
-	$("iframe").attr("src","https://www.youtube.com/embed/"+backgroundVideo+"?autoplay=1&controls=0&enablejsapi=1&controls=0&disablekb=1")
-	$("iframe").css("filter",`blur(${backgroundVideoBlur}px)`)
-	$("iframe").css("opacity",`0`)
-	$(".mini-buttons").show(0,function(){$(this).css("display","flex")})
-	if (showYTVideo){
-		$("body").css("background","#000")
-		$("iframe").css("opacity",`${backgroundVideoOpacity}`)
-	}
+if (video == "video.mp4") {
+	v = $('<video>', {
+		controls: true, width: "100vw", height: "100vh", autoplay: true, loop: true, muted: muteVideo
+	}).append($('<source>', { src: video, type: 'video/mp4' }));
+	$('body').append(v);
+	$(".mini-buttons.video").show().css("display", "flex");
+	v.css({ filter: `blur(${videoBlur}px)`, opacity: videoOpacity });
+	if (showVideo) $("body").css("background", "#000");
+	v[0].play();
 }
-else{}
 
-var video;
 function onYouTubeIframeAPIReady() {
-	video = new YT.Player('youtube-video', {events: {'onReady': onPlayerReady}});
+	yt = new YT.Player('youtube-video', { events: { 'onReady': onPlayerReady } });
 }
-function onPlayerReady(){
 
+function onPlayerReady() {
+	if (muteVideo) toggleMute($(".mini-buttons.yt button")[0]);
 }
-var isMute = false;
+
 function toggleMute(self) {
-	$(self).toggleClass("act")
-	if (isMute){
-		isMute = false;
-		video.unMute();
-	}
-	else{
-		isMute = true;
-		video.mute();
-	}
+	$(self).toggleClass("act");
+	isMute = !isMute;
+	isMute ? yt.mute() : yt.unMute();
 }
 
-var isPaused = false;
 function togglePause(self) {
-	$(self).toggleClass("act")
-	if (isPaused) {
-		video.playVideo();
-		isPaused = false;
-	} else {
-		video.pauseVideo();
-		isPaused = true;
+	$(self).toggleClass("act");
+	isPaused = !isPaused;
+	isPaused ? yt.pauseVideo() : yt.playVideo();
+}
+
+
+function toggleMuteVideo(self) {
+	$(self).toggleClass("act");
+	v[0].muted = !v[0].muted;
+}
+
+function togglePauseVideo(self) {
+	$(self).toggleClass("act");
+	v[0].paused ? v[0].play() : v[0].pause();
+}
+
+function setVolume(volume) {
+	if (a) {
+		a[0].volume = volume/100;
 	}
+
+	if (v) {
+		v[0].volume = volume/100;
+	}
+
+	if (yt.videoTitle != "") {
+		yt.setVolume(volume);
+	}
+
+	$(".inpt span").text(volume+"%")
+	//$(".inpt span").css({opacity:(volume/100)+0.2})
+
+	$(".volume-slider").css({
+		background: `rgba(var(--main), ${((volume / 100) + 0.2)})`
+	});
 }

@@ -5,6 +5,7 @@
 /*=================================================================*/
 /* If you have any problems you can contact us via discord. <3     */
 
+
 var staff_team = [
 
 	{
@@ -21,6 +22,11 @@ var staff_team = [
 ]
 
 
+// Staff Settings
+const showStaffTeam = true
+const showPlayersList = true
+
+
 // orange
 // red
 // blue
@@ -29,13 +35,18 @@ var staff_team = [
 // purple
 const theme = "orange"
 
-const discord = "erw" // If = "" then icon will not show up on screen
-const instagram = "https://instagram.com/"
+
+// Text settings
+const name = "<strong>NEV</strong>ERA"
+const underName = "ROLE<b>PLAY</b>"
+const desc = "FiveM Roleplay server featuring an extensive collection of custom scripts, maps, vehicles, unique weapons, and much more."
+
+
+// Social media
+const discord = "https://discord.gg/NeveraDev/tw28AqrgWU"
+const instagram = "" // If = "" then icon will not show up on screen
 const youtube = "https://youtube.com/"
 const twitter = "https://twitter.com/"
-
-const showStaffTeam = true
-const showPlayersList = true
 
 
 // Player List
@@ -43,9 +54,15 @@ const serverCode = "******" //Your server CODE from fivem. (cfx.re/join/abcdef) 
 const playerProfileImage = "https://forum.cfx.re/user_avatar/forum.cfx.re/neveradevelopment/144/4447132_2.png"
 
 
-// If you want to remove backgroundVideo, set it = "" 
-const backgroundVideo = "4CiESD8IjmM" // Youtube video code. (https://www.youtube.com/watch?v=abcdefgh) this ABCDEFGH is your code, paste it in backgroundVideo. 
-const backgroundVideoBlur = 0 // Higher number = more blur (some good blur is 5)
-const backgroundVideoOpacity = 0.3
+// Video Settings
+const videoBlur = 0
+var videoOpacity = 0.1
 
-const showYTVideo = true // set this to false if you want to only get sound from video and static (image) background.
+
+// video can be:
+// Youtube link EXAMPLE: https://www.youtube.com/watch?v=4CiESD8IjmM \\
+// video.mp4 \\ for local video
+// X \\ for nothing
+const video = "https://www.youtube.com/watch?v=4CiESD8IjmM"
+const muteVideo = false
+const showVideo = true
