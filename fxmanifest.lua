@@ -13,6 +13,7 @@ loadscreen_cursor "yes"
 client_script "client.lua"
 
 files {
+    'html/video.mp4',
     'html/index.html',
     'html/config.js',
     'html/assets/js/**',
