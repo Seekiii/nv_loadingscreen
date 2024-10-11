@@ -56,7 +56,7 @@ const playerProfileImage = "https://forum.cfx.re/user_avatar/forum.cfx.re/nevera
 
 // Video Settings
 const videoBlur = 0
-var videoOpacity = 0.1
+var videoOpacity = 0.3
 
 
 // video can be:
