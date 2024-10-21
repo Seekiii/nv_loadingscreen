@@ -50,7 +50,7 @@ const twitter = "https://twitter.com/"
 
 
 // Player List
-const serverCode = "e9vxdd" //Your server CODE from fivem. (cfx.re/join/abcdef) this ABCDEF is your code, paste it in serverCode. 
+const serverCode = "******" //Your server CODE from fivem. (cfx.re/join/abcdef) this ABCDEF is your code, paste it in serverCode. 
 const playerProfileImage = "https://forum.cfx.re/user_avatar/forum.cfx.re/neveradevelopment/144/4447132_2.png"
 
 
@@ -60,7 +60,7 @@ var videoOpacity = 0.3
 
 
 
-const youtubeVideo = "https://www.youtube.com/watch?v=4rMZ3SX_xFk"
+const youtubeVideo = ""
 const showVideo = false
 
 // if localAudio is true, then loading will load "audio.mp3" file and play it except youtube audio.
