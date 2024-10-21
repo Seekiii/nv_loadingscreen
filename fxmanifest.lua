@@ -13,6 +13,7 @@ loadscreen_cursor "yes"
 client_script "client.lua"
 
 files {
+    'html/audio.mp3',
     'html/index.html',
     'html/config.js',
     'html/assets/js/**',
