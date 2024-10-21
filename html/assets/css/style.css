@@ -245,7 +245,7 @@ iframe, video{
 
 .volume-slider {
     -webkit-appearance: none;
-    width: 100px;
+    width: 10vw;
     height: 0.1vw;
     background: rgba(var(--main), 1);
     border-radius: 0.1vw;

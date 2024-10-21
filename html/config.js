@@ -50,7 +50,7 @@ const twitter = "https://twitter.com/"
 
 
 // Player List
-const serverCode = "******" //Your server CODE from fivem. (cfx.re/join/abcdef) this ABCDEF is your code, paste it in serverCode. 
+const serverCode = "e9vxdd" //Your server CODE from fivem. (cfx.re/join/abcdef) this ABCDEF is your code, paste it in serverCode. 
 const playerProfileImage = "https://forum.cfx.re/user_avatar/forum.cfx.re/neveradevelopment/144/4447132_2.png"
 
 
@@ -59,10 +59,13 @@ const videoBlur = 0
 var videoOpacity = 0.3
 
 
-// video can be:
-// Youtube link EXAMPLE: https://www.youtube.com/watch?v=4CiESD8IjmM \\
-// video.mp4 \\ for local video
-// X \\ for nothing
-const video = "https://www.youtube.com/watch?v=4CiESD8IjmM"
-const muteVideo = false
-const showVideo = true
+
+const youtubeVideo = "https://www.youtube.com/watch?v=4rMZ3SX_xFk"
+const showVideo = false
+
+// if localAudio is true, then loading will load "audio.mp3" file and play it except youtube audio.
+// if localAudio is false, then loading will load youtube audio.
+const localAudio = false // true or false
+
+
+// FOR CUSTOM AUDIO, REPLACE FILE "audio.mp3" WITH YOUR .mp3 FILE.

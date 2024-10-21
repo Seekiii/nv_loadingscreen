@@ -55,6 +55,9 @@ function players(){
 	$.get("https://servers-frontend.fivem.net/api/servers/single/"+serverCode,function(data){
 		serverInfo = data.Data
 		serverInfo.players.forEach(function(player){
+
+
+			
 			$(".player_list").append(`
 				<div class="staff">
 					<div class="info">
@@ -124,8 +127,8 @@ if (theme == "purple"){
 
 let a, v, yt, isMute = false, isPaused = false;
 
-if (video.startsWith("https://www.youtube.com") && video != "video.mp4") {
-	let videoId = video.split('/').pop().split('=')[1];
+if (youtubeVideo.startsWith("https://www.youtube.com")) {
+	let videoId = youtubeVideo.split('/').pop().split('=')[1];
 	if (!showVideo){
 		videoOpacity = 0
 	}
@@ -135,16 +138,10 @@ if (video.startsWith("https://www.youtube.com") && video != "video.mp4") {
 	$(".mini-buttons.yt").show().css("display", "flex");
 	if (showVideo) $("body").css("background", "#000");
 }
-
-if (video == "video.mp4") {
-	v = $('<video>', {
-		controls: true, width: "100vw", height: "100vh", autoplay: true, loop: true, muted: muteVideo
-	}).append($('<source>', { src: video, type: 'video/mp4' }));
-	$('body').append(v);
-	$(".mini-buttons.video").show().css("display", "flex");
-	v.css({ filter: `blur(${videoBlur}px)`, opacity: videoOpacity });
-	if (showVideo) $("body").css("background", "#000");
-	v[0].play();
+if (localAudio){
+	$('body').append('<audio id="audioPlayer" src="audio.mp3" loop></audio>');
+	$('#audioPlayer')[0].play();
+	a = $('#audioPlayer')
 }
 
 function onYouTubeIframeAPIReady() {
@@ -152,7 +149,7 @@ function onYouTubeIframeAPIReady() {
 }
 
 function onPlayerReady() {
-	if (muteVideo) toggleMute($(".mini-buttons.yt button")[0]);
+	if (localAudio){yt.mute()};
 }
 
 function toggleMute(self) {
@@ -192,7 +189,6 @@ function setVolume(volume) {
 	}
 
 	$(".inpt span").text(volume+"%")
-	//$(".inpt span").css({opacity:(volume/100)+0.2})
 
 	$(".volume-slider").css({
 		background: `rgba(var(--main), ${((volume / 100) + 0.2)})`
