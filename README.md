@@ -1,3 +1,6 @@
+> [!WARNING]  
+> **The YouTube background video feature is no longer working. YouTube has blocked FiveM from loading its content, resulting in a black screen.**
+
 ## V1.6 (Changelogs)
 - Removed players list (didn't work anymore)
 - Added tips panel (on right side)
