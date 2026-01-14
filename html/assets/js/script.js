@@ -209,12 +209,16 @@ function load_tips(config) {
         if (tip.img && tip.img.startsWith("/tips")){
         	img = `<img src="assets/img${tip.img}">`
         }
+        var pClass = ''
+        if (img == ''){
+        	pClass = 'long'
+        }
         panelItem.innerHTML = `
             ${img}
             <div class="bg">
 	            <div class="content">
 	                <h2>${tip.title}</h2>
-	                <p>${tip.text}</p>
+	                <p class='${pClass}'>${tip.text}</p>
 	            </div>
         	</div>
         `;
